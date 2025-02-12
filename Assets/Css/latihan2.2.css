@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+.header-list ul {
+    list-style: none;
+}
+.main {
+    flex-grow: 1;
+    background-color: lightblue;
+}
