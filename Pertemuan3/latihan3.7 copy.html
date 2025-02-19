@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Harga Barang</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Sub Total</th>
+        </tr>
+        <script>
+            var total = 0;
+            for (var i = 0; i < 3; i++) {
+                var nama1 = prompt("Nama Barang 1:");
+                var harga1 = parseInt(prompt("Harga Barang 1:"));
+                var jumlah1 = parseInt(prompt("Jumlah Barang 1:"));
+                var subtotal1 = harga1 * jumlah1;
+                total += subtotal1;
+                document.write("<tr><td>" + nama1 + "</td><td>" + harga1 + "</td><td>" + jumlah1 + "</td><td>" + subtotal1 + "</td></tr>");
+            }
+            
+            var diskon = parseInt(prompt("Masukkan jumlah diskon:"));
+            var jdiskon = total * (diskon / 100);
+            var totalAkhir = total - jdiskon;
+            var uangDibayar = parseInt(prompt("Masukkan jumlah uang yang dibayarkan:"));
+            var kembalian = uangDibayar - totalAkhir;
+            
+            document.write("<tr><td></td><td></td><td>Total Harga</td><td>" + total + "</td></tr>");
+            document.write("<tr><td></td><td></td><td>Total Diskon</td><td>" + jdiskon + "</td></tr>");
+            document.write("<tr><td></td><td></td><td>Total Bayar</td><td>" + totalAkhir + "</td></tr>");
+            document.write("<tr><td></td><td></td><td>Uang Dibayar</td><td>" + uangDibayar + "</td></tr>");
+            document.write("<tr><td></td><td></td><td>Kembalian</td><td>" + kembalian + "</td></tr>");
+        </script>
+    </table>
+</body>
+</html>
